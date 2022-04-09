@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+
+    <div class="card col-md-6" style="width: 30rem;">
+      <img src="../../assets/image-removebg-preview (15).png" class="card-img-top" alt="logo" width="200" height="150">
+
+      <div class="card-body">
+        <h2>Create a Quote!</h2><br>
+        <form #login="ngForm" (ngSubmit)="submitForm()">
+
+          <div class="form-group mb-2">
+            <label for="author">Author's Name</label>
+            <input type="text" #author="ngModel" class="form-control" name="author" placeholder="Author's name.." required
+              ngModel>
+          </div>
+          <div *ngIf="author.touched && author.invalid" class="alert alert-danger">Invalid name</div>
+
+          <div class="mb-2">
+            <label for="description">Write Quote</label>
+            <textarea type="text" #description="ngModel" class="form-control" name="description" rows="5"
+              placeholder=" '' " required ngModel></textarea>
+
+            <div class="form-group mb-2">
+              <label for="name">Your Name</label>
+              <input type="text" #name="ngModel" class="form-control" name="name" size="30" placeholder="name.."
+                minlength="2" maxlength="8" required ngModel>
+            </div>
+            <div *ngIf="name.touched && name.invalid" class="alert alert-danger">Invalid name</div>
+
+
+          </div>
+          <button class="btn btn-primary btn-outline-primary btn-success text-white" type= "submt">Add Quote</button>
+        </form>
+    </div>
+  </div>
+</div>
