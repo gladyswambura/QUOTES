@@ -8,6 +8,10 @@ import { Quote } from '../quote';
 })
 export class QuoteInfoComponent implements OnInit {
 
+  submit(login:any) {
+    console.log(formSubmitted, login)
+  }
+
   quotes:Quote[]=[
       new Quote(1, 'if you want the rainbow, you must put up with the rain', 0, 0),
       new Quote(2, 'if you want the rainbow, you must put up with the rain', 0, 0),
@@ -20,3 +24,7 @@ export class QuoteInfoComponent implements OnInit {
   }
 
 }
+function formSubmitted(formSubmitted: any, login: any) {
+  throw new Error('Function not implemented.');
+}
+

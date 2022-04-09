@@ -6,36 +6,57 @@
 
       <div class="card-body">
         <h2>Create a Quote!</h2><br>
+        <form #login="ngForm" (ngSubmit)="submit(login)">
 
-        <div class="form-group mb-2">
-          <label for="name">Your Name</label>
-          <input type="text" class="form-control" name="name" placeholder="name.." required>
-        </div><br>
+          <div class="form-group mb-2">
+            <label for="name">Author's Name</label>
+            <input type="text" #name="ngModel" class="form-control" name="name" placeholder="Author's name.." required
+              ngModel>
+          </div><br>
 
-        <div class="form-group mb-2">
-          <label for="name">Author's Name</label>
-          <input type="text" class="form-control" name="name" placeholder="Author's name.." required>
-        </div><br>
+          <div class="mb-2">
+            <label for="description">Write Quote</label>
+            <textarea type="text" #description="ngModel" class="form-control" name="description" rows="5" placeholder=" '' "
+              required
+              ngModel></textarea>
 
-        <div class="mb-2">
-          <label for="description">Write Quote</label>
-          <textarea type="text" class="form-control" name="description" rows="5" placeholder=" '' " required></textarea>
+            <div class="form-group mb-2">
+                <label for="name">Your Name</label>
+                <input type="text" #name="ngModel" class="form-control" name="name" placeholder="name.." required
+                  ngModel>
+            </div><br>
 
-        </div>
-        <button class="btn btn primary" type="submt">Add Quote</button>
+
+          </div>
+          <button class="btn btn primary" type="submt">Add Quote</button>
+        </form>
       </div>
-
     </div>
 
+
     <div class="list col-md-6" style="text-align: center;">
-        <h2>Quotes!</h2><br>
-        <ul *ngFor="let quote of quotes" class="list-group">
-            <li [appHighlight]>{{quote.quote}} <span class="margin-left: 3%;"><button><img
-                    src="../../assets/arrowup.png"
-                    alt="arrow up" [width]="40" class="upwnvote">{{quote.upvotes}}</button></span>
-                    <span><button><img src="../../assets/arrowdown.png" alt="arrowdown"[width]="40" class="downvote">{{quote.downvotes}}</button></span>
-            </li>
-        </ul>
+      <h2>Quotes!</h2><br>
+      
+      <ul *ngFor="let quote of quotes" class="list-group">
+        <div *ngIf="quote.upvotes==1; then highlight else empty"></div>
+
+        <ng-template #highlight>
+          <li appHighlight>{{quote.quote}} <span class="margin-left: 3%;"><button><img src="../../assets/arrowup.png"
+                  alt="arrow up" [width]="40" class="upwnvote">{{quote.upvotes}}</button></span>
+            <span><button><img src="../../assets/arrowdown.png" alt="arrowdown" [width]="40"
+                  class="downvote">{{quote.downvotes}}</button></span>
+          </li>
+        </ng-template>
+
+        <ng-template #empty>
+          <li>{{quote.quote}} <span class="margin-left: 3%;"><button><img src="../../assets/arrowup.png" alt="arrow up"
+                  [width]="40" class="upwnvote">{{quote.upvotes}}</button></span>
+            <span><button><img src="../../assets/arrowdown.png" alt="arrowdown" [width]="40"
+                  class="downvote">{{quote.downvotes}}</button></span>
+          </li>
+        </ng-template>
+      </ul>
+
     </div>
   </div>
 </div>
