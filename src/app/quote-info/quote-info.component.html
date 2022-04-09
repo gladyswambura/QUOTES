@@ -30,7 +30,10 @@
     <div class="list col-md-6" style="text-align: center;">
         <h2>Quotes!</h2><br>
         <ul *ngFor="let quote of quotes" class="list-group">
-            <li>{{quote.quote}}></li>
+            <li>{{quote.quote}} <span class="margin-left: 3%;"><button><img src="../../assets/arrowup.png"
+                    alt="arrow up" [width]="40" class="upwnvote">{{quote.upvotes}}</button></span>
+                    <span><button><img src="../../assets/arrowdown.png" alt="arrowdown"[width]="40" class="downvote">{{quote.downvotes}}</button></span>
+            </li>
         </ul>
     </div>
   </div>
