@@ -33,3 +33,17 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Further help
 https://www.linkedin.com/in/gladys-wahito-wambura/
+
+## Licence
+
+MIT License
+
+Copyright (c) [2022] [Gladys Wambura]. All Rights Reserved.
+<a href="./LICENSE"> LICENSE</a>
+
+## Authors Info
+
+Slack Profile - [Gladys Wambura](https://stackoverflow.com/users/18241026/gladys-wahito?tab=profile)
+
+Linked - [Gladys Wambura](https://www.linkedin.com/in/gladys-wahito-3480a01ab/)
+
