@@ -1,15 +1,20 @@
-<h1>{{quote.Author}}</h1>
-<p>{{quote.name}}</p>
-<h3>Publish on:<span style="color: green;">{{quote.completeDate|date 'short'}}</span></h3>
+ <!-- <p>{{quote.Author}}</p>
+<p>{{quote.name}}</p>  -->
+<!-- <h3>Published on:<span style="color: green;">{{quote.completeDate|date 'short'}}</span></h3> -->
 
 <div class="likes">
-  <h2>Number of likes:</h2>
-  <button class="btn btn-success" (click)="likeButtonClick()">like</button>
-  <span>{{numberOfLike}}</span>
-  <button class="btn btn-danger" (click)="dislikeButtonClick()">Dislike</button>
-  <span>{{numberOfDislike}}</span>
-</div>
+  <p>Number of likes:</p>
+  <!-- like button -->
+   <button class="btn btn-success" (click)="likeButtonClick()">likes: </button>
+  <span>{{numberOfLike}}</span><br><br>
 
-<button class="del" (click)='quoteComplete(true)'>Delete</button>
+  <!-- dislike button -->
+   <button class="btn btn-danger" (click)="dislikeButtonClick()">Dislikes: </button>
+  <span>{{numberOfDislike}}</span><br><br>
+</div> 
+
+<!-- delete quote button -->
+ <button class="del btn btn-primary btn-outline-primary btn-danger text-white"
+  (click)="quoteComplete(true)">Delete Quote</button> 
 
 <!-- <h3>Publish on:<span style="color: green;">{{quote.author|date 'short'|lowercase}}</span> </h3> -->
