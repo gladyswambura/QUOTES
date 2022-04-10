@@ -3,6 +3,8 @@
 # created By
 Gladys Wambura
 
+![image](https://user-images.githubusercontent.com/97955649/162623977-77137bfc-5f5c-44f4-9bf6-3f6e3f22f789.png)
+
 # Technologies used
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.8.0
 Html for structuring
