@@ -1,14 +1,18 @@
 export class Quote {
     id:number;
     quote:string;
-    upvotes:number;
-    downvotes:number
+    Author:string;
+    name:string;
+     
+     showAuthor: boolean;
+    constructor(id:number, quote:string, Author: string, name:string, completeDate: Date){
+      this.showAuthor=false;
 
-    constructor(id:number,quote:string, upvotes:number, downvotes:number) {
         this.id=id;
         this.quote=quote;
-        this.upvotes=upvotes;
-        this.downvotes=downvotes
+        this.Author=Author;
+        this.name=name;
+        completeDate
     }
     
 }
