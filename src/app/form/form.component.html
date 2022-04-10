@@ -6,7 +6,7 @@
 
       <div class="card-body">
         <h2>Create a Quote!</h2><br>
-        <form #login="ngForm" (ngSubmit)="submitForm()">
+        <form #goalForm="ngForm" (ngSubmit)="submitForm()">
 
           <div class="form-group mb-2">
             <label for="author">Author's Name</label>
@@ -26,6 +26,12 @@
                 minlength="2" maxlength="8" required ngModel>
             </div>
             <div *ngIf="name.touched && name.invalid" class="alert alert-danger">Invalid name</div>
+
+             <div class="form-group">
+               <label for="date">Completed on:</label>
+               <input type='date' id="date" [(ngModel)]="newQuote.completeDate" date="date" #date="ngModel" required>
+
+             </div>
 
 
           </div>
