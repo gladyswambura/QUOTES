@@ -1,9 +1,13 @@
- <!-- <p>{{quote.Author}}</p>
-<p>{{quote.name}}</p>  -->
-<!-- <h3>Published on:<span style="color: green;">{{quote.completeDate|date 'short'}}</span></h3> -->
+
+
 
 <div class="likes">
-  <p>Number of likes:</p>
+  <p>quote: <span>{{quote.quote}}</span> </p>
+  <p>Author: {{quote.Author}}</p>
+  <p>Written by:{{quote.name}}</p>
+  <h3>Published on:<span style="color: green;">{{quote.completeDate|date}}</span></h3>
+  
+
   <!-- like button -->
    <button class="btn btn-success" (click)="likeButtonClick()">likes: </button>
   <span>{{numberOfLike}}</span><br><br>
